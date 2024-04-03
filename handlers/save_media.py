@@ -66,7 +66,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
         )
         share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=_{str_to_b64(str(SaveMessage.id))}"
         short_link = get_short(share_link)
-        await editable.edit(f"<b>Batch Files Stored in my Database!\n\nOriginal Link : <code>{share_link}</code>\nShort Link : <code>{short_link}</code></b>\nJust Click the link to get your files!",
+        await editable.edit(f"<b>Batch Files Stored in my Database!\n\nOriginal Link : <code>{share_link}</code>\n\nShort Link : <code>{short_link}</code>\n\nJust Click the link to get your files!</b>",
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("Original Link", url=share_link),
                   InlineKeyboardButton("Short Link", url=short_link)]]
@@ -103,7 +103,7 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             disable_web_page_preview=True)
         share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=_{str_to_b64(file_er_id)}"
         short_link = get_short(share_link)
-        await editable.edit(f"<b>Batch Files Stored in my Database!\n\nOriginal Link : <code>{share_link}</code>\nShort Link : <code>{short_link}</code></b>\nJust Click the link to get your files!",
+        await editable.edit(f"<b>Batch Files Stored in my Database!\n\nOriginal Link : <code>{share_link}</code>\n\nShort Link : <code>{short_link}</code>\n\nJust Click the link to get your files!</b>",
             reply_markup=InlineKeyboardMarkup(
                [[InlineKeyboardButton("Original Link", url=share_link),
                   InlineKeyboardButton("Short Link", url=short_link)]]
