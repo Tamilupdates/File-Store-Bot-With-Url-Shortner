@@ -6,8 +6,8 @@ class Config(object):
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
   BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
   DB_CHANNEL = int(os.environ.get("DB_CHANNEL", ""))
-  SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "MoneyKamalo.com")
-  SHORTLINK_API = os.environ.get('SHORTLINK_API', "0eefb93e1e3ce9470a7033115ceb1bad13a9d674")
+  SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
+  SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
   BOT_OWNER = int(os.environ.get("BOT_OWNER", ""))
   DATABASE_URL = os.environ.get("DATABASE_URL", "")
   UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
@@ -18,8 +18,9 @@ class Config(object):
   BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "").split()))
   OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
   ABOUT_BOT_TEXT = f"""
-This is a Permanent FileStore Bot. 
-Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edit Permission, I will add save Uploaded File in Channel and Share a Shareable Link. 
+<b>This is a Permanent FileStore Bot. 
+Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edit Permission,
+I will add save Uploaded File in Channel and Share a Shareable Link. 
 
 ╭────[ 🔅FɪʟᴇSᴛᴏʀᴇBᴏᴛ🔅]────⍟
 │
@@ -29,10 +30,10 @@ Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edi
 │
 ├🔹 Library: [Pyrogram](https://docs.pyrogram.org)
 │
-╰──────[ 😎 ]───────────⍟
+╰──────[ 😎 ]───────────⍟</b>
 """
   HOME_TEXT = """
-Hello, [{}](tg://user?id={})\n\nThis is a Permanent **FileStore Bot**.
+<b>Hello, [{}](tg://user?id={})\n\nThis is a Permanent FileStore Bot.
 
-📢 Send me any File & It will be uploaded in My Database & You will Get the File Link.
+📢 Send me any File & It will be uploaded in My Database & You will Get the File Link</b>.
 """

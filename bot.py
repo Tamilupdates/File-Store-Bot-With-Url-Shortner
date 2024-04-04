@@ -400,8 +400,8 @@ async def button(bot: Client, cmd: CallbackQuery):
         await cmd.message.edit("<b>File Saved in Batch!\n\n"
                                "Press below button to get batch link.</b>",
                                reply_markup=InlineKeyboardMarkup([
-                                   [InlineKeyboardButton("🔰 Get Batch Link 🔗", callback_data="getBatchLink")],
-                                   [InlineKeyboardButton("🔒 Close 🔒", callback_data="closeMessage")]
+                                   [InlineKeyboardButton("🔰 Get Batch Link 🔰", callback_data="getBatchLink")],
+                                   [InlineKeyboardButton("Close 🔒", callback_data="closeMessage")]
                                ]))
 
     elif "addToBatchFalse" in cb_data:
