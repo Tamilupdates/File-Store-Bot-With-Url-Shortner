@@ -126,8 +126,8 @@ async def main(bot: Client, message: Message):
         await message.reply_text(
             text="**Choose an option from below:**",
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Save in Batch", callback_data="addToBatchTrue")],
-                [InlineKeyboardButton("Get Sharable Link", callback_data="addToBatchFalse")]
+                [InlineKeyboardButton("🔰 Save in Batch 🔰", callback_data="addToBatchTrue")],
+                [InlineKeyboardButton("🔗 Get Sharable Link 🔗", callback_data="addToBatchFalse")]
             ]),
             quote=True,
             disable_web_page_preview=True
@@ -400,7 +400,7 @@ async def button(bot: Client, cmd: CallbackQuery):
         await cmd.message.edit("<b>File Saved in Batch!\n\n"
                                "Press below button to get batch link.</b>",
                                reply_markup=InlineKeyboardMarkup([
-                                   [InlineKeyboardButton("🔰 Get Batch Link 🔰", callback_data="getBatchLink")],
+                                   [InlineKeyboardButton("🔗 Get Batch Link 🔗", callback_data="getBatchLink")],
                                    [InlineKeyboardButton("🔒 Close 🔒", callback_data="closeMessage")]
                                ]))
 
